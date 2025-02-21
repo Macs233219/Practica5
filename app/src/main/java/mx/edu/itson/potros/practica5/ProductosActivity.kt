@@ -50,6 +50,35 @@ class ProductosActivity : AppCompatActivity() {
                 menu.add(Product("Pulpo al Mojo de Ajo", R.drawable.quesadillas, "", 35.00))
                 menu.add(Product("Pulpo Zarandeado", R.drawable.quesadillas, "", 35.00))
             }
+            "Combinaciones"->{
+                menu.add(Product("Traditional Taco Combo", R.drawable.taco, "Tortilla de Maíz y tu carne favorita. Servido con arroz y frijoles  - Corn taco, your choice of meat, served with rice and beans.", 6.99))
+                menu.add(Product("Mexican Burritos", R.drawable.quesadillas, "Tu carne favorita en una tortilla grande de harina rellena con cebolla frita, pico de gallo, guacamole, sour cream, frijoles y acompañado de arroz -Your choice of meat on a big burrito made of flour tortilla with rice, beans, lettuce, grilled onions, pico de gallo, guacamole and sour cream.", 12.99))
+                menu.add(Product("Los Portales Burrito", R.drawable.quesadillas, "Large flour tortilla filled with grilled cactus, steak, pastor (seasoned pork), grilled onions, rice and beans. Served with a side of lettuce salad, tomatoes, sour cream and guacamole.", 13.59))
+                menu.add(Product("Cinco", R.drawable.quesadillas, "One hard sell taco with your choice of meat, lettuce and cheese. One burrito with your choice of meat, pico de gallo, sour cream, guacamole and beans. Served with rice and beans.", 9.99))
+                menu.add(Product("Dos Amigos", R.drawable.quesadillas, "Two hard shell tacos with your choice of meat topped with lettuce and shredded cheese. served with a side of rice and beans", 9.99))
+                menu.add(Product("Burrito Pepe", R.drawable.quesadillas, "Flour tortilla filled with your choice of meat with beans, lettuce, sour cream, guacamole and pico de gallo. served with a side of rice.", 9.99))
+                menu.add(Product("Fajita Burrito", R.drawable.quesadillas, "Gran burrito relleno de tu carne favorita, cebolla, chile, arroz, frijoles y jitomate. Servido con lechuga y guacamole - Large burrito filled with your choice of meat, onions, chile, peppers, rice, beans and tomatoes. Served with lettuce guacamole and sour cream.", 13.59))
+                menu.add(Product("Fajita Quesadilla", R.drawable.quesadillas, "Quesadilla extra grande (10 inches), rellena con tu carne favorita, cebolla asada, chile banana y jitomate. Servida con arroz, frijoles y ensalada - 10 inches quesadilla filled with your choice of meat, cooked with grilled onions, banana peppers and tomatoes. Served with rice beans and salad.", 13.99))
+            }
+            "Tortas"->{
+                menu.add(Product("Torta Regular", R.drawable.quesadillas, "All tortas come with lettuce, onions, tomatoes, avocado, sour cream, jalapeno pepper and your choice of meat.", 12.99))
+                menu.add(Product("Torta -Milanesa de Res o Pollo", R.drawable.quesadillas, "Breaded Steak or Chicken", 13.99))
+                menu.add(Product("Torta Cubana", R.drawable.quesadillas, "Chorizo, asada, jamon, pastor y queso  Mexican sausage, steak, marinated pork, ham, and cheese", 13.99))
+                menu.add(Product("Torta Mixta", R.drawable.quesadillas, "Chorizo, asada y pastor./  Mexican sausage, steak and marinated pork.", 13.99))
+                menu.add(Product("Small Mexican Torta", R.drawable.quesadillas, "Bolillo bread sandwich with your of meat, shredded lettuce, avocado, tomato, onion and sour cream.", 7.39))
+            }
+            "Sopas"->{
+                menu.add(Product("Pozole", R.drawable.quesadillas, "Weekends only", 5.99))
+                menu.add(Product("Menudo", R.drawable.quesadillas, "Wednesday to Sunday", 5.99))
+                menu.add(Product("Caldo de Res", R.drawable.quesadillas, "", 5.99))
+                menu.add(Product("Caldo de Camarón", R.drawable.quesadillas, "Shrimp soup", 13.99))
+                menu.add(Product("Sopa de Mariscos", R.drawable.quesadillas, "Seafood soup", 19.99))
+            }
+            "Drinks"->{
+                menu.add(Product("Soft Drinks 20oz - Sodas 20oz.", R.drawable.quesadillas, "", 2.99))
+                menu.add(Product("Jarritos", R.drawable.quesadillas, "", 2.75))
+                menu.add(Product("Aguas Frescas", R.drawable.quesadillas, "", 2.99))
+            }
         }
     }
 
