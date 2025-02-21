@@ -21,7 +21,8 @@ class ProductosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
 
-        agregarProductos()
+        var menuOption: String? = intent.getStringExtra("menuType")
+        agregarProductos(menuOption)
 
         var listView: ListView = findViewById(R.id.listview) as ListView
 
@@ -29,13 +30,27 @@ class ProductosActivity : AppCompatActivity() {
         listView.adapter = adaptador
     }
 
-    fun agregarProductos() {
-        menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada. Filled with your choice of meat, served with salad.", 5.69))
-        menu.add(Product("Huaraches", R.drawable.huaraches, "Tortilla gruesa con frijoles, tu carne favorita, lechuga, queso fresco y crema. Big Thick tortilla with beans, your choice", 10.99))
-        menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña - Flour tortilla filled with cheese, marinated pork and pineapple", 7.99))
-        menu.add(Product("Sincronizada", R.drawable.sincronizadas, "Tortilla de harina y rellena con queso y jamón. Acompañada de lechuga, crema y guacamole - Two flour tortillas filled with ham and cheese. Served with lettuce, sour cream, and guacamole.", 7.99))
-        menu.add(Product("Sopes", R.drawable.sopes, "Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema - Fried thick tortilla with beans, your choice of meat, lettuce, fresh cheese, and sour cream.", 3.79))
-        menu.add(Product("Tostadas", R.drawable.tostadas, "Tortilla frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate - Fried tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 4.59))
+    fun agregarProductos(option:String?) {
+        when(option) {
+            "Antojitos"->{
+                menu.add(Product("Quesadillas", R.drawable.quesadillas, "Rellenas con su carne favorita, servidas con ensalada. Filled with your choice of meat, served with salad.", 5.69))
+                menu.add(Product("Huaraches", R.drawable.huaraches, "Tortilla gruesa con frijoles, tu carne favorita, lechuga, queso fresco y crema. Big Thick tortilla with beans, your choice", 10.99))
+                menu.add(Product("Gringas", R.drawable.gringas, "Tortilla de harina con queso, carne al pastor y piña - Flour tortilla filled with cheese, marinated pork and pineapple", 7.99))
+                menu.add(Product("Sincronizada", R.drawable.sincronizadas, "Tortilla de harina y rellena con queso y jamón. Acompañada de lechuga, crema y guacamole - Two flour tortillas filled with ham and cheese. Served with lettuce, sour cream, and guacamole.", 7.99))
+                menu.add(Product("Sopes", R.drawable.sopes, "Tortilla gruesa cubierta de frijoles, tu carne favorita, lechuga, queso fresco y crema - Fried thick tortilla with beans, your choice of meat, lettuce, fresh cheese, and sour cream.", 3.79))
+                menu.add(Product("Tostadas", R.drawable.tostadas, "Tortilla frita con frijoles, tu carne favorita, lechuga, queso fresco, crema y jitomate - Fried tortilla with beans, your choice of meat, lettuce, fresh cheese, sour cream and tomatoes.", 4.59))
+            }
+            "Especialidades"->{
+                menu.add(Product("Mojarra Frita - Fried Fish", R.drawable.quesadillas, "Tilapia frita servida con lechuga, cebolla, jitomate, aguacate y tortillas - Fried tilapia served with lettuce, onions, tomatoes, avocado and tortillas", 6.99))
+                menu.add(Product("Ceviche", R.drawable.quesadillas, "Tilapia, camarones. Aguacate y pico de gallo servido con Chips / Tilapia, Shrimp, Avocado and pico de gallo, served with Chips", 6.99))
+                menu.add(Product("Botana de camarones a la Diabla", R.drawable.quesadillas, "", 19.99))
+                menu.add(Product("Torre de Camarón Negro", R.drawable.quesadillas, "", 19.99))
+                menu.add(Product("Botana de Pulpo a la Diabla", R.drawable.quesadillas, "", 16.99))
+                menu.add(Product("Botana de Pulpo al Mojo de Ajo", R.drawable.quesadillas, "", 24.99))
+                menu.add(Product("Pulpo al Mojo de Ajo", R.drawable.quesadillas, "", 35.00))
+                menu.add(Product("Pulpo Zarandeado", R.drawable.quesadillas, "", 35.00))
+            }
+        }
     }
 
     private class AdaptadorProductos: BaseAdapter {
